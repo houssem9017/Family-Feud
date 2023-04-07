@@ -12,7 +12,7 @@ struct HomeView: View {
     @State var isLinkActive2 = false
     @State var isLinkActive3 = false
     @State var isLinkActive4 = false
-    var body: some View {
+    var body: some View{
         NavigationView{
             ZStack(alignment: .topLeading){
                 VStack(alignment: .center, spacing:40)  {

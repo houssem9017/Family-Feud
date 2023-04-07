@@ -10,7 +10,7 @@ import SwiftUI
 struct PlayView: View {
     @State var isLinkActive = false
     @State var isLinkActive2 = false
-    var body: some View {
+    var body: some View{
         NavigationView{
             ZStack(alignment: .topLeading){
                 VStack(alignment: .center, spacing:40)  {

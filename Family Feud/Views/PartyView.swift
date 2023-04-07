@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PartyView: View {
+struct PartyView: View{
     @State var isLinkActive = false
     @State var isLinkActive2 = false
     var body: some View{
