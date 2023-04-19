@@ -10,6 +10,7 @@ import SwiftUI
 struct PlayView: View {
     @State var isLinkActive = false
     @State var isLinkActive2 = false
+    @StateObject var partyViewModel = PartyViewModel()
     var body: some View{
         NavigationView{
             ZStack(alignment: .topLeading){
@@ -26,7 +27,33 @@ struct PlayView: View {
                         .shadow(radius: 10)
                     Spacer().frame(height:100)
                     NavigationLink(destination:PartyView() ,isActive:$isLinkActive){
-                        Button(action:{self.isLinkActive=true},label:{
+                        Button(action:{
+                            partyViewModel.createparty() { result in
+                                switch result {
+                                case .success(let response):
+                                    let defaults = UserDefaults.standard
+                                    defaults.set(response.myId, forKey: "myId")
+                                    print(response.myId)
+                                    if let userId = defaults.string(forKey: "userid") {
+                                        partyViewModel.addUserToParty(user: userId, party: response.myId) { result in
+                                            switch result {
+                                            case .success(let data):
+                                                self.isLinkActive=true
+                                                print("addUserToParty")
+                                            case .failure(let error):
+                                                print("addUserToParty error: \(error.localizedDescription)")
+                                            }
+                                        }
+                                    } else {
+                                        print("User ID not found in UserDefaults")
+                                    }
+                                case .failure(let error):
+                                    print(error)
+                                }
+                            }
+
+                            
+                        },label:{
                             CustomButtonWithSize(title: "Create Party", bgColor: "Orange",max: 250,size:30)})
                     }
                     NavigationLink(destination:JoinPartyView() ,isActive:$isLinkActive2){

@@ -12,6 +12,7 @@ struct HomeView: View {
     @State var isLinkActive2 = false
     @State var isLinkActive3 = false
     @State var isLinkActive4 = false
+    @State private var username: String = "userr"
     var body: some View{
         NavigationView{
             ZStack(alignment: .topLeading){
@@ -25,7 +26,10 @@ struct HomeView: View {
                         
                         Spacer()
                         NavigationLink(destination:Login() ,isActive:$isLinkActive2){
-                            Button(action:{self.isLinkActive2=true},label:{
+                            Button(action:{self.isLinkActive2=true
+                                let defaults = UserDefaults.standard
+                                defaults.removeObject(forKey: "username")
+                            },label:{
                                 CustomButtonWithSize(title: "Logout", bgColor: "Orange",max: 120, size:20) .padding(.horizontal,10)
                             })
                         }
@@ -35,12 +39,18 @@ struct HomeView: View {
                     .resizable()
                     .frame(width:326,height:200)
                     .padding(.top,-110)
-                    Text("Hello, user")
+                    Text("Hello, "+username)
                         .foregroundColor(.white)
                         .font(.system(size:40))
                         .fontWeight(.bold)
                         .frame(maxWidth: .infinity,alignment: .top)
                         .shadow(radius: 10)
+                        .onAppear {
+                            let defaults = UserDefaults.standard
+                            if let myString = defaults.string(forKey: "username") {
+                                self.username=myString
+                                }
+                            }
                     Spacer().frame(height:40)
                     NavigationLink(destination:PlayView() ,isActive:$isLinkActive3){
                         Button(action:{self.isLinkActive3=true},label:{

@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8302A9E5A90D3D034ACA4D61 /* Pods_Family_Feud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61EED5C17A77F8253FAE76CA /* Pods_Family_Feud.framework */; };
 		B523C85829DE1A8500F02183 /* Family_FeudApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B523C85729DE1A8500F02183 /* Family_FeudApp.swift */; };
 		B523C85A29DE1A8500F02183 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B523C85929DE1A8500F02183 /* ContentView.swift */; };
 		B523C85C29DE1A8600F02183 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B523C85B29DE1A8600F02183 /* Assets.xcassets */; };
-		B523C85F29DE1A8600F02183 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B523C85E29DE1A8600F02183 /* Preview Assets.xcassets */; };
 		B523C86929DE1A8600F02183 /* Family_FeudTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B523C86829DE1A8600F02183 /* Family_FeudTests.swift */; };
 		B523C87329DE1A8600F02183 /* Family_FeudUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B523C87229DE1A8600F02183 /* Family_FeudUITests.swift */; };
 		B523C87529DE1A8600F02183 /* Family_FeudUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B523C87429DE1A8600F02183 /* Family_FeudUITestsLaunchTests.swift */; };
@@ -26,6 +26,16 @@
 		B5A88B9529DF97F7002BA3A8 /* JoinPartyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A88B9429DF97F7002BA3A8 /* JoinPartyView.swift */; };
 		B5A88B9729DF9C8A002BA3A8 /* PartyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A88B9629DF9C8A002BA3A8 /* PartyView.swift */; };
 		B5FD985529DF697400DA2626 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FD985429DF697400DA2626 /* ProfileView.swift */; };
+		C1A483AE29EF7990003B1870 /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A483AD29EF7990003B1870 /* PostsViewModel.swift */; };
+		C1CBE80629EFBD8D005BB3A4 /* QueueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CBE80529EFBD8D005BB3A4 /* QueueView.swift */; };
+		C1CBE80829EFCBCA005BB3A4 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CBE80729EFCBCA005BB3A4 /* GameView.swift */; };
+		C70B472A29EB665700EF28B0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70B472929EB665700EF28B0 /* User.swift */; };
+		C70B472D29EB66C200EF28B0 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70B472C29EB66C200EF28B0 /* SignupViewModel.swift */; };
+		C70B472F29EB98A800EF28B0 /* SigninViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70B472E29EB98A800EF28B0 /* SigninViewModel.swift */; };
+		C70B473329EC99D700EF28B0 /* ForgetPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70B473229EC99D700EF28B0 /* ForgetPassword.swift */; };
+		C752B73129EEC0CD002D1CF0 /* PartyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C752B73029EEC0CD002D1CF0 /* PartyViewModel.swift */; };
+		C788763A29EC9FAB0048F962 /* forgetPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = C788763929EC9FAB0048F962 /* forgetPassword.swift */; };
+		C78FF0F329EE127A000C78E1 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78FF0F229EE127A000C78E1 /* ProfileViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,11 +56,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5F4694FCC28AE4D424C9500D /* Pods-Family Feud.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Family Feud.debug.xcconfig"; path = "Target Support Files/Pods-Family Feud/Pods-Family Feud.debug.xcconfig"; sourceTree = "<group>"; };
+		61EED5C17A77F8253FAE76CA /* Pods_Family_Feud.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Family_Feud.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		98EFA34CD2464F8975C65E4B /* Pods-Family Feud.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Family Feud.release.xcconfig"; path = "Target Support Files/Pods-Family Feud/Pods-Family Feud.release.xcconfig"; sourceTree = "<group>"; };
 		B523C85429DE1A8500F02183 /* Family Feud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Family Feud.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B523C85729DE1A8500F02183 /* Family_FeudApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Family_FeudApp.swift; sourceTree = "<group>"; };
 		B523C85929DE1A8500F02183 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B523C85B29DE1A8600F02183 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B523C85E29DE1A8600F02183 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B523C86429DE1A8600F02183 /* Family FeudTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Family FeudTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B523C86829DE1A8600F02183 /* Family_FeudTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Family_FeudTests.swift; sourceTree = "<group>"; };
 		B523C86E29DE1A8600F02183 /* Family FeudUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Family FeudUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +80,16 @@
 		B5A88B9429DF97F7002BA3A8 /* JoinPartyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinPartyView.swift; sourceTree = "<group>"; };
 		B5A88B9629DF9C8A002BA3A8 /* PartyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyView.swift; sourceTree = "<group>"; };
 		B5FD985429DF697400DA2626 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		C1A483AD29EF7990003B1870 /* PostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModel.swift; sourceTree = "<group>"; };
+		C1CBE80529EFBD8D005BB3A4 /* QueueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueView.swift; sourceTree = "<group>"; };
+		C1CBE80729EFCBCA005BB3A4 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		C70B472929EB665700EF28B0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C70B472C29EB66C200EF28B0 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
+		C70B472E29EB98A800EF28B0 /* SigninViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewModel.swift; sourceTree = "<group>"; };
+		C70B473229EC99D700EF28B0 /* ForgetPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPassword.swift; sourceTree = "<group>"; };
+		C752B73029EEC0CD002D1CF0 /* PartyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyViewModel.swift; sourceTree = "<group>"; };
+		C788763929EC9FAB0048F962 /* forgetPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = forgetPassword.swift; sourceTree = "<group>"; };
+		C78FF0F229EE127A000C78E1 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8302A9E5A90D3D034ACA4D61 /* Pods_Family_Feud.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +118,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A44C30E05ECE191C30156EF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5F4694FCC28AE4D424C9500D /* Pods-Family Feud.debug.xcconfig */,
+				98EFA34CD2464F8975C65E4B /* Pods-Family Feud.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B523C84B29DE1A8500F02183 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +134,8 @@
 				B523C86729DE1A8600F02183 /* Family FeudTests */,
 				B523C87129DE1A8600F02183 /* Family FeudUITests */,
 				B523C85529DE1A8500F02183 /* Products */,
+				7A44C30E05ECE191C30156EF /* Pods */,
+				DD46C9E2D4CA0EB6BDC8E601 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,23 +152,15 @@
 		B523C85629DE1A8500F02183 /* Family Feud */ = {
 			isa = PBXGroup;
 			children = (
+				C70B472B29EB669900EF28B0 /* ViewModels */,
+				C70B472829EB5B9F00EF28B0 /* Models */,
 				B5970AEE29DE2348001EC47A /* SupportingViews */,
 				B523C88329DE1F3500F02183 /* Views */,
 				B523C85729DE1A8500F02183 /* Family_FeudApp.swift */,
 				B523C85929DE1A8500F02183 /* ContentView.swift */,
 				B523C85B29DE1A8600F02183 /* Assets.xcassets */,
-				B523C85D29DE1A8600F02183 /* Preview Content */,
-				B523C88129DE1AFD00F02183 /* login.swift */,
 			);
 			path = "Family Feud";
-			sourceTree = "<group>";
-		};
-		B523C85D29DE1A8600F02183 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				B523C85E29DE1A8600F02183 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		B523C86729DE1A8600F02183 /* Family FeudTests */ = {
@@ -158,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				B523C88429DE1F5C00F02183 /* LoginView.swift */,
+				B523C88129DE1AFD00F02183 /* login.swift */,
 				B5970AF129DE451C001EC47A /* signup.swift */,
 				B5970AF529DE54EE001EC47A /* SplashScreen.swift */,
 				B5FD985429DF697400DA2626 /* ProfileView.swift */,
@@ -167,6 +194,9 @@
 				B5A88B9629DF9C8A002BA3A8 /* PartyView.swift */,
 				B5607B3729DFA269003FB0E8 /* PostGameView.swift */,
 				B5607B3929DFA631003FB0E8 /* RulesView.swift */,
+				C788763929EC9FAB0048F962 /* forgetPassword.swift */,
+				C1CBE80529EFBD8D005BB3A4 /* QueueView.swift */,
+				C1CBE80729EFCBCA005BB3A4 /* GameView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -179,6 +209,35 @@
 			path = SupportingViews;
 			sourceTree = "<group>";
 		};
+		C70B472829EB5B9F00EF28B0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C70B472929EB665700EF28B0 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C70B472B29EB669900EF28B0 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C70B472C29EB66C200EF28B0 /* SignupViewModel.swift */,
+				C70B472E29EB98A800EF28B0 /* SigninViewModel.swift */,
+				C70B473229EC99D700EF28B0 /* ForgetPassword.swift */,
+				C78FF0F229EE127A000C78E1 /* ProfileViewModel.swift */,
+				C752B73029EEC0CD002D1CF0 /* PartyViewModel.swift */,
+				C1A483AD29EF7990003B1870 /* PostsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DD46C9E2D4CA0EB6BDC8E601 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				61EED5C17A77F8253FAE76CA /* Pods_Family_Feud.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -186,9 +245,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B523C87829DE1A8600F02183 /* Build configuration list for PBXNativeTarget "Family Feud" */;
 			buildPhases = (
+				8267D1144E02E852C34C150A /* [CP] Check Pods Manifest.lock */,
 				B523C85029DE1A8500F02183 /* Sources */,
 				B523C85129DE1A8500F02183 /* Frameworks */,
 				B523C85229DE1A8500F02183 /* Resources */,
+				1FA713AD7469002924D332B4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -283,7 +344,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B523C85F29DE1A8600F02183 /* Preview Assets.xcassets in Resources */,
 				B523C85C29DE1A8600F02183 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +364,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1FA713AD7469002924D332B4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Family Feud/Pods-Family Feud-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Family Feud/Pods-Family Feud-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Family Feud/Pods-Family Feud-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8267D1144E02E852C34C150A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Family Feud-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B523C85029DE1A8500F02183 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -311,17 +413,27 @@
 			files = (
 				B5607B3A29DFA631003FB0E8 /* RulesView.swift in Sources */,
 				B557E59129DF8658005B66B2 /* HomeView.swift in Sources */,
+				C70B472D29EB66C200EF28B0 /* SignupViewModel.swift in Sources */,
 				B5FD985529DF697400DA2626 /* ProfileView.swift in Sources */,
+				C788763A29EC9FAB0048F962 /* forgetPassword.swift in Sources */,
 				B523C85A29DE1A8500F02183 /* ContentView.swift in Sources */,
+				C70B473329EC99D700EF28B0 /* ForgetPassword.swift in Sources */,
 				B523C88229DE1AFD00F02183 /* login.swift in Sources */,
 				B5970AF629DE54EE001EC47A /* SplashScreen.swift in Sources */,
+				C70B472F29EB98A800EF28B0 /* SigninViewModel.swift in Sources */,
 				B5607B3829DFA269003FB0E8 /* PostGameView.swift in Sources */,
 				B5970AF029DE2366001EC47A /* CustomViews.swift in Sources */,
+				C70B472A29EB665700EF28B0 /* User.swift in Sources */,
 				B5A88B9529DF97F7002BA3A8 /* JoinPartyView.swift in Sources */,
+				C78FF0F329EE127A000C78E1 /* ProfileViewModel.swift in Sources */,
+				C752B73129EEC0CD002D1CF0 /* PartyViewModel.swift in Sources */,
 				B5970AF229DE451C001EC47A /* signup.swift in Sources */,
 				B523C88529DE1F5C00F02183 /* LoginView.swift in Sources */,
+				C1CBE80629EFBD8D005BB3A4 /* QueueView.swift in Sources */,
+				C1A483AE29EF7990003B1870 /* PostsViewModel.swift in Sources */,
 				B5A88B9729DF9C8A002BA3A8 /* PartyView.swift in Sources */,
 				B5A88B9329DF96FB002BA3A8 /* PlayView.swift in Sources */,
+				C1CBE80829EFCBCA005BB3A4 /* GameView.swift in Sources */,
 				B523C85829DE1A8500F02183 /* Family_FeudApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,6 +587,7 @@
 		};
 		B523C87929DE1A8600F02183 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F4694FCC28AE4D424C9500D /* Pods-Family Feud.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -503,6 +616,7 @@
 		};
 		B523C87A29DE1A8600F02183 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98EFA34CD2464F8975C65E4B /* Pods-Family Feud.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

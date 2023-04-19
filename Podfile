@@ -6,14 +6,6 @@ target 'Family Feud' do
   use_frameworks!
 
   # Pods for Family Feud
-
-  target 'Family FeudTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'Family FeudUITests' do
-    # Pods for testing
-  end
+  pod 'Alamofire', '~> 5.2'
 
 end

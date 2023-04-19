@@ -1,0 +1,6 @@
+framework module Pods_Family_Feud {
+  umbrella header "Pods-Family Feud-umbrella.h"
+
+  export *
+  module * { export * }
+}

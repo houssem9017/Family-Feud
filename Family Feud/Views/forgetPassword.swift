@@ -1,21 +1,18 @@
 //
-//  login.swift
+//  forgetPassword.swift
 //  Family Feud
 //
-//  Created by houssem on 5/4/2023.
+//  Created by Rayen ben slimen on 16/4/2023.
 //
 
 import Foundation
-
 import SwiftUI
 
-struct Login: View {
-    
-    @State private var email: String = ""
-    @State private var password: String = ""
+struct forgetPassword: View {
     @State var isLinkActive = false
     @State var isLinkActive2 = false
-    
+    @State var isShowingAlert = false
+    @StateObject var forgetPasswordViewModel = ForgetPasswordViewModel()
     var body: some View {
         NavigationView{
             ZStack(alignment: .topLeading){
@@ -36,7 +33,7 @@ struct Login: View {
                                 .resizable()
                                 .frame(width:326,height:200)
                                 .padding(.top,-110)
-                            Text("Welcome")
+                            Text("Forget Password ?")
                                 .foregroundColor(.white)
                                 .font(.system(size:40))
                                 .fontWeight(.bold)
@@ -48,57 +45,46 @@ struct Login: View {
                         }
                         VStack(spacing: 30){
                             VStack(spacing: 30){
-                                CustomTextField(placeHolder: "Email", imageName: "envelope", bColor: "Orange", tOpacity: 0.6, value: $email)
-                                CustomTextField(placeHolder: "Password", imageName: "lock", bColor: "Orange", tOpacity: 0.6, value: $password)
+                                CustomTextField(placeHolder: "Send Mail", imageName: "lock", bColor: "Orange", tOpacity: 0.6, value:$forgetPasswordViewModel.email)
                             }
                             VStack{
-                                Text("Forgot Password")
-                                    .fontWeight(.medium)
-                                    .foregroundColor(Color("Orange"))
-                                
-                                NavigationLink(destination:HomeView() ,isActive:$isLinkActive){
-                                    Button(action:{self.isLinkActive=true},label:{
-                                        CustomButton(title: "Sign In", bgColor: "Orange",max: 300)
+                                Button(action:{
+                                    let request = ForgetPasswordRequest(email:forgetPasswordViewModel.email)
+                                    forgetPasswordViewModel.forgetpassword(request: request){
+                                    result in switch result{
+                                        case .success(let response):
+                                        print(response.message)
+                                        if (response.message == "Email not found"){
+                                            isShowingAlert = true
+                                        }
+                                            else{
+                                    isLinkActive=true
+                                          
+                                        }
+                                            
+                                       
+                                        case .failure(let error):
+                                            print(error)
+                                        }
+                                    }
+                                },label:{
+                                        CustomButton(title: "Send Mail", bgColor: "Orange",max: 300)
                                             .padding(.top,16)
                                     })
-                                }
                             }
-                            HStack{
-                                Button(action:{},label:{
-                                    Image("fb")
-                                        .resizable()
-                                        .frame(width: 30,height: 30)
-                                        .padding(.horizontal,15)
-                                        .padding(.vertical,15)
-                                        .background(Color("Orange"))
-                                        .cornerRadius(20)
-                                        
-                                })
-                                Spacer()
-                                Button(action:{},label:{
-                                    Image("mail")
-                                        .resizable()
-                                        .frame(width: 30,height: 30)
-                                        .padding(.horizontal,15)
-                                        .padding(.vertical,15)
-                                        .background(Color("Orange"))
-                                        .cornerRadius(20)
-                                        
-                                })
-                                
-                            }.padding(.horizontal,110)
+                            NavigationLink(destination: Login().navigationBarBackButtonHidden(true), isActive: $isLinkActive) { EmptyView() }
                         }
                     }
                     Spacer()
                     HStack{
-                        Text("Don't have an account?")
+                        Text("Remember Password?")
                             .fontWeight(.medium)
                             .foregroundColor(Color("White"))
                             .font(.system(size:18))
                         
-                        NavigationLink(destination:signup() ,isActive:$isLinkActive2){
+                        NavigationLink(destination:Login() ,isActive:$isLinkActive2){
                             Button(action:{self.isLinkActive2=true},label:{
-                                Text("Sign Up")
+                                Text("Sign In")
                                     .fontWeight(.bold)
                                     .foregroundColor(Color("Orange"))
                             })
@@ -113,11 +99,15 @@ struct Login: View {
             .edgesIgnoringSafeArea(.bottom)
         }
         .navigationBarHidden(true)
+        .alert(isPresented: $isShowingAlert) {
+                    Alert(title: Text("Error"), message: Text("Please verif your mail"), dismissButton: .default(Text("OK")))
+                }
     }
 
 }
-struct Login_Previews: PreviewProvider {
+
+struct forgetPassword_Previews: PreviewProvider {
     static var previews: some View {
-        Login()
+        forgetPassword()
     }
 }

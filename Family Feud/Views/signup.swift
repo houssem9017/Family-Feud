@@ -8,12 +8,10 @@
 import SwiftUI
 
 struct signup: View {
-    @State private var email: String = ""
-    @State private var username: String = ""
-    @State private var password: String = ""
-    @State private var confirmpassword: String = ""
     @State var isLinkActive = false
-    
+    @State var isLinkActive2 = false
+
+    @StateObject var signViewModel = SignupViewModel()
     var body: some View {
         NavigationView{
             ZStack(alignment: .topLeading){
@@ -37,15 +35,60 @@ struct signup: View {
                         }
                         VStack(spacing: 20){
                             VStack(spacing: 20){
-                                CustomTextField(placeHolder: "Username", imageName: "person", bColor: "Blue", tOpacity: 0.8, value: $username)
-                                CustomTextField(placeHolder: "Email", imageName: "envelope", bColor: "Blue", tOpacity: 0.8, value: $email)
-                                CustomTextField(placeHolder: "Password", imageName: "lock", bColor: "Blue", tOpacity: 0.8, value: $password)
-                                CustomTextField(placeHolder: "Confirm Password", imageName: "lock", bColor: "Blue", tOpacity: 0.8, value: $confirmpassword)
+                                CustomTextField(placeHolder: "Username", imageName: "person", bColor: "Blue", tOpacity: 0.8, value: $signViewModel.username).onChange(of: signViewModel.username) { value in
+                                    signViewModel.validateUsername()
+                                }
+                            if let errorMessage = signViewModel.usernameError {
+                                Text(errorMessage)
+                                    .foregroundColor(.red).font(.system(size:12)).frame(maxWidth:.infinity, alignment:.leading)
                             }
-                            VStack{CustomButton(title: "Sign Up", bgColor: "Blue",max: 300)
-                                    .padding(.top,16)
+                                CustomTextField(placeHolder: "Email", imageName: "envelope", bColor: "Blue", tOpacity: 0.8, value: $signViewModel.email).onChange(of: signViewModel.email) { value in
+                                    signViewModel.validateEmail()
+                                }
+                            if let errorMessage = signViewModel.emailError {
+                                Text(errorMessage)
+                                    .foregroundColor(.red).font(.system(size:12)).frame(maxWidth:.infinity, alignment:.leading)
+                            }
+                                CustomTextField(placeHolder: "Password", imageName: "lock", bColor: "Blue", tOpacity: 0.8, value: $signViewModel.password).onChange(of: signViewModel.password) { value in
+                                    signViewModel.validatePassword()
+                                }
+                            if let errorMessage = signViewModel.passwordError {
+                                Text(errorMessage)
+                                    .foregroundColor(.red).font(.system(size:12)).frame(maxWidth:.infinity, alignment:.leading)
+                            }
+                                CustomTextField(placeHolder: "Confirm Password", imageName: "lock", bColor: "Blue", tOpacity: 0.8, value: $signViewModel.confirmPassword).onChange(of: signViewModel.confirmPassword) { value in
+                                    signViewModel.validateConfirmPassword()
+                                }
+                            if let errorMessage = signViewModel.confirmPasswordError {
+                                Text(errorMessage)
+                                    .foregroundColor(.red).font(.system(size:12)).frame(maxWidth:.infinity, alignment:.leading)
+                            }
+                            }
+                            
+                            VStack{
+                                Button(
+                                    action : {
+                                        let request = SignupRequest(username: signViewModel.username, email: signViewModel.email, password: signViewModel.password)
+                                        signViewModel.signup(request: request){
+                                            result in
+                                            switch result {
+                                            case .success(let response):
+        	
+                                                isLinkActive=true
+                                                print(isLinkActive)
+                                                    print(response)
+                                            case .failure(let error):
+                                        
+                                                print(error)
+                                            }
+                                        }
+                                    }
+                                    ,label:{
+                                        CustomButton (title: "Sign Up", bgColor: "Blue",max: 300)
+                                            .padding(.top,16)
+                                    })
                                 
-                                
+                            
                             }.padding(.horizontal,20)
                             
                             HStack{
@@ -73,6 +116,7 @@ struct signup: View {
                                 
                             }.padding(.horizontal,110)
                                 .padding(.top,-6)
+                            
                         }
                     }
                     Spacer()
@@ -103,6 +147,7 @@ struct signup: View {
             .edgesIgnoringSafeArea(.bottom)
         }
         .navigationBarHidden(true)
+        NavigationLink(destination: Login().navigationBarBackButtonHidden(true), isActive: $isLinkActive) { EmptyView() }
     }
 
 }
